@@ -30,7 +30,6 @@ HRGN DoCreateRgnFromBitmap(HBITMAP hbm, COLORREF rgb)
                     }
                 }
             }
-
         }
         SelectObject(hdc, hbmOld);
         DeleteDC(hdc);
@@ -53,8 +52,8 @@ HWND DoCreateOne(void)
 
     HRGN hRgn = CreateRectRgn(0, 0, 0, 0);
     CombineRgn(hRgn, s_hrgn, NULL, RGN_COPY);
-
     SetWindowRgn(hwnd, hRgn, TRUE);
+
     ShowWindow(hwnd, SW_SHOWNORMAL);
     UpdateWindow(hwnd);
     return hwnd;
