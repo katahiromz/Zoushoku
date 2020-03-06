@@ -121,6 +121,8 @@ WinMain(HINSTANCE   hInstance,
         LPSTR       lpCmdLine,
         INT         nCmdShow)
 {
+    srand(GetTickCount());
+
     s_hbm = LoadBitmap(hInstance, MAKEINTRESOURCE(1));
     GetObject(s_hbm, sizeof(s_bm), &s_bm);
     s_hrgn = DoCreateRgnFromBitmap(s_hbm, RGB(255, 0, 255));
