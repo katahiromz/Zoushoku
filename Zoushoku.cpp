@@ -148,5 +148,6 @@ WinMain(HINSTANCE   hInstance,
     }
 
     DeleteObject(s_hbm);
+    DeleteObject(s_hrgn);
     return 0;
 }
