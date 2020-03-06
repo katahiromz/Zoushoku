@@ -45,7 +45,7 @@ HWND DoCreateOne(void)
     INT x = rand() % (GetSystemMetrics(SM_CXSCREEN) - cx);
     INT y = rand() % (GetSystemMetrics(SM_CYSCREEN) - cy);
 
-    HWND hwnd = CreateWindow(s_szName, s_szName, WS_POPUPWINDOW,
+    HWND hwnd = CreateWindow(s_szName, s_szName, WS_POPUP,
                              x, y, cx, cy,
                              NULL, NULL, GetModuleHandle(NULL), NULL);
     if (!hwnd)
